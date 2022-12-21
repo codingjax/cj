@@ -1,0 +1,4 @@
+browser-sync start --server 'app' --files 'app'
+sudo npm i browser-sync -g
+
+browser-sync start --proxy 'http://localhost:3002/' --files '/Users/jasond/Local Sites/cj/app-node/src'
