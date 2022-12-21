@@ -23,7 +23,7 @@ function Header({
         <div className={styles['title-wrap']}>
           <p className={styles['site-title']}>
             <Link href="/">
-              <a>{title}</a>
+              {title}
             </Link>
           </p>
           {description && <p className={styles.description}>{description}</p>}
@@ -33,17 +33,15 @@ function Header({
             {links?.map((link) => (
               <li key={`${link.label}$-menu`}>
                 <Link href={link.url ?? ''}>
-                  <a href={link.url}>{link.label}</a>
+                  {link.label}
                 </Link>
               </li>
             ))}
             <li>
-              <Link href="https://github.com/wpengine/faustjs">
-                <a
-                  className="button"
-                  href="https://github.com/wpengine/faustjs">
+              <Link href="https://github.com/wpengine/faustjs" className="button">
+                
                   GitHub
-                </a>
+                
               </Link>
             </li>
           </ul>

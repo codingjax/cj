@@ -42,7 +42,7 @@ function Posts({
               <div>
                 <Heading level={postTitleLevel} className={styles.title}>
                   <Link href={`/posts/${post.slug}`}>
-                    <a>{post.title()}</a>
+                    {post.title()}
                   </Link>
                 </Heading>
                 <div
@@ -50,10 +50,12 @@ function Posts({
                   // eslint-disable-next-line react/no-danger
                   dangerouslySetInnerHTML={{ __html: post.excerpt() ?? '' }}
                 />
-                <Link href={`/posts/${post.slug}`}>
-                  <a aria-label={`Read more about ${post.title || 'the post'}`}>
-                    {readMoreText}
-                  </a>
+                <Link
+                  href={`/posts/${post.slug}`}
+                  aria-label={`Read more about ${post.title || 'the post'}`}>
+
+                  {readMoreText}
+
                 </Link>
               </div>
             </div>
